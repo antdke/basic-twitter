@@ -1,5 +1,12 @@
 console.log('Hello World!');
 
+// grabs the loading icon from HTML
+const loadingElement = document.querySelector('.loading');
+
+// now that I have the loading element, I can do things with it
+// hiding the loading icon from the client
+loadingElement.style.display = 'none';
+
 // grabs the <form> from the HTML
 const form = document.querySelector('form');
 
@@ -19,4 +26,8 @@ form.addEventListener('submit', event => {
     content,
   };
   console.log(mew);
+
+  // after I hit submit, the form disappears and the loading icon displays
+  form.style.display = 'none';
+  loadingElement.style.display = '';
 });
